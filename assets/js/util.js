@@ -125,20 +125,20 @@ input::placeholder {
 
 @media (max-width: 650px) {
   body{
-    font-size: 15px;
+    font-size: 19px;
   }
   .movies {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
   }
   .movie-item {
     margin: 10px;
   }
   input[type="search"] {
-    min-width: 25%;
+    min-width: 70%;
   }
   .title{
     margin: 20px 0 10px 25px;
-    font-size: 30px;
+    font-size: 35px;
   }
   .search__group {
     margin: 10px 0 5px 25px;
@@ -159,10 +159,19 @@ input::placeholder {
     text-align: center;
   }
   body{
-    font-size: 16px;
+    font-size: 24px;
+  }
+  .input__label{
+    font-size: 24px;
+  }
+  .input-search{
+    font-size: 24px;
+  }
+  .input-search[placeholder] {
+    font-size: 18px;
   }
   .movies {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
   .movie-item {
     margin: 5px;
@@ -171,35 +180,45 @@ input::placeholder {
     max-width: 100%;
   }
   input[type="search"] {
-    min-width: 10%;
+    min-width: 15%;
     font-size: 15px;
   }
   .search__group {
     margin: 15px 0 5px 25px;
   }
-  lable[for="checkbox"] {
-    // padding-top: 5px;
-  }
   .title{
     margin: 10px 0 5px 25px;
-    font-size: 25px;
+    font-size: 35px;
+  }
+  .movie-title{
+    font-size: 20px;
   }
 }
-@media (max-width: 360px) {
+@media (max-width: 400px) {
+  body{
+    font-size: 24px;
+  }
+  .movie-title{
+    font-size: 22px;
+  }
+  .input__label{
+    font-size: 25px;
+  }
   .title{
     text-align: center;
     margin: 10px 0;
   }
+  .input-search[placeholder] {
+    font-size: 21px;
+  }
   .search__group--input{
     display: flex;
-    // flex-direction: column;
     align-items: center;
     justify-content: center;
-    // margin: 10px 0;
     margin:10px 0px;  
   }
   .movie-title{
-    font-size: 13px;
+    font-size: 20px;
   }
   input[type="search"] {
     min-width: 6%;
@@ -207,7 +226,14 @@ input::placeholder {
   .search__group--checkbox{
     margin: 5px 0;
     display: flex;
-
     justify-content: center;
+  }
+  .movies {
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  }
+}
+@media (max-width: 370px) {
+  .movies {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
 }`;
