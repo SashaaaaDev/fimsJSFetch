@@ -9,10 +9,15 @@ body {
   padding: 0;
   margin: 0;
   // background-color: bisque;
-  background: rgb(131,58,180);
-  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 0%, rgba(252,176,69,1) 0%, rgba(253,93,46,1) 50%, rgba(252,176,69,1) 100%);  
+  // background: rgb(131,58,180);
+  background: linear-gradient(to top left ,
+    rgba(253, 93, 46, 1) 0%, 
+    rgba(252, 176, 69, 1) 50%, 
+    rgba(252, 176, 69, 1) 100%
+  ););  
   font-family: sans-serif;
   font-size: 20px;
+  height: 100vh;
   color: #9e2b09;
 }
 .container {
@@ -42,10 +47,8 @@ body {
   transition: .5s all;
   z-index: 1;
 }
-.movie-title:hover{
-  // text-decoration: underline;
+.movie-title:active{
   cursor: pointer;
-  // background-color: rgba(210,144,123,0.74);
   color: #e8d26f
 
 }
@@ -55,7 +58,6 @@ body {
   border: 3px solid #9e2b09;
   padding: 2px;
   margin: 0 auto;
-
   margin-bottom: 10px;
   max-width: 100%;
   object-fit: cover;
