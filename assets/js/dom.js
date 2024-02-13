@@ -1,9 +1,11 @@
+//import styles
 import { styles } from "./util.js";
 
 let wrapMovies = null;
 export let inputSearch = null;
 export let checkboxTrigger = false;
 
+//constructor of elements
 const constrElem = ({
   tag = "div",
   attrs = {},
@@ -69,6 +71,7 @@ const constrWrap = () => {
     container: contr,
   });
 
+//search group elements
   const searchGrpInput = constrElem({
     tag: "div",
     attrs: {
@@ -81,7 +84,7 @@ const constrWrap = () => {
     tag: "label",
     attrs: {
       for: "search",
-      innerHTML: "Movie search:",
+      innerHTML: "Movie searсh:",
       class: "input__label",
     },
     container: searchGrpInput,
@@ -104,6 +107,7 @@ const constrWrap = () => {
     },
     container: wrapper,
   });
+
   constrElem({
     tag: "input",
     attrs: {
@@ -117,6 +121,7 @@ const constrWrap = () => {
       checkboxTrigger = !checkboxTrigger;
     },
   });
+
   constrElem({
     tag: "label",
     attrs: {
@@ -133,14 +138,10 @@ const constrWrap = () => {
     },
     container: contr,
   });
-  // wrapMovies = movies;
 };
-export const movieAdd = (movie) => {
-  // const item = document.createElement("div");
-  // const pic = document.createElement("img");
 
-  // item.classList.add("movie-item");
-  // pic.classList.add("movie-img");
+//create movies
+export const movieAdd = (movie) => {
   const item = constrElem({
     tag: "div",
     attrs: {
@@ -158,6 +159,7 @@ export const movieAdd = (movie) => {
     },
     container: item,
   });
+
   const pic = constrElem({
     tag: "img",
     attrs: {
@@ -171,11 +173,12 @@ export const movieAdd = (movie) => {
     },
     container: titleSpan,
   });
-  // span title under img
 };
+
 export const clearMovies = () => {
   wrapMovies && (wrapMovies.innerHTML = "");
 };
+
 export const renderMovies = () => {
   constrStyle();
   constrWrap();
