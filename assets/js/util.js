@@ -9,7 +9,7 @@ body {
   padding: 0;
   margin: 0;
   // background-color: bisque;
-  // background: rgb(131,58,180);
+  background: rgb(131,58,180);
   background: linear-gradient(to top left ,
     rgba(253, 93, 46, 1) 0%, 
     rgba(252, 176, 69, 1) 50%, 
