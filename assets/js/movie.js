@@ -1,3 +1,4 @@
+//import functions
 import {
   renderMovies,
   movieAdd,
@@ -8,6 +9,7 @@ import {
 
 let searchString = null;
 
+//function delay 
 const timeLine = (() => {
   let timer = null;
   return (cb, ms) => {
@@ -19,6 +21,7 @@ const timeLine = (() => {
   };
 })();
 
+//function get data from url
 const getData = (url) =>
   fetch(url)
     .then((res) => res.json())
