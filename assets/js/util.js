@@ -1,42 +1,48 @@
 export let styles = `*{
   box-sizing: border-box;
 }
+
 a{
   text-decoration: none;
   color: #9e2b09;
 }
+
 body {
   padding: 0;
   margin: 0;
-  // background-color: bisque;
-  background: rgb(131,58,180);
-  background: linear-gradient(to top left ,
-    rgba(253, 93, 46, 1) 0%, 
-    rgba(252, 176, 69, 1) 50%, 
-    rgba(252, 176, 69, 1) 100%
-  ););  
   font-family: sans-serif;
   font-size: 20px;
   height: 100vh;
   color: #9e2b09;
-  background-size: cover;
   width: 100%;
 }
+
 .container {
+  min-height: 100vh;
   padding: 25px 25px 0 25px;
+  background: linear-gradient(to top left ,
+    rgba(253, 93, 46, 1) 0%, 
+    rgba(252, 176, 69, 1) 50%, 
+    rgba(252, 176, 69, 1) 100%
+  );); 
+  background-size: cover; 
 }
+
 .title{
   text-align: left;
   margin: 40px 0 20px 25px;
 }
+
 .movies {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
+
 .movie-item {
   flex-direction: column;
   margin: 15px;
 }
+
 .movie-title{
   display: flex;  
   align-items: center;
@@ -49,10 +55,10 @@ body {
   transition: .5s all;
   z-index: 1;
 }
+
 .movie-title:active{
   cursor: pointer;
   color: #e8d26f
-
 }
 .movie-img {
   display: block;
@@ -66,12 +72,14 @@ body {
   aspect-ratio: 2/3;  
   transition: .5s all;
 }
+
 .movie-img:hover{
   filter: grayscale(1);
   cursor: pointer;
   transform: scale(1.05);
   border-radius: 10px;
 }
+
 .search__group{
   display: flex;
   align-items: flex-start;
@@ -86,6 +94,7 @@ body {
   align-items: flex-start;
   justify-content: center;
 }
+
 input[type="search"] {
   margin:10px 0;
   min-width: 25%; 
@@ -97,27 +106,32 @@ input[type="search"] {
   color: #9e2b09;
   transition: .5s all;
 }
+
 input:focus{
   border-bottom: 2px solid #5e4f05;
-  // transition: .3s all;
   outline: none;
 }
+
 input:focus::placeholder {
   border:none;
   color:#5e4f05;
   transition: 1s all;
 }
+
 input::placeholder {
   color: #c77055;
   transition: 1s all;
 }
+
 .input__label{
   font-size: 23px;
 }
+
 .checkbox__label{
   user-select: none;
   cursor: pointer;
 }
+
 .input-checkbox{
   width:15px;
   height: 15px;
@@ -130,6 +144,8 @@ input::placeholder {
 @media (max-width: 650px) {
   body{
     font-size: 19px;
+    width:100%;
+    height: 100vh;
   }
   .movies {
     grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
@@ -152,12 +168,6 @@ input::placeholder {
   }
 }
 @media (max-width: 450px) {
-  .wrapper{
-    // display: flex;
-    // // flex-direction: column;
-    // // align-items: center;
-    // // justify-content: center;
-  }
   lable[for="search"] {
     font-size: 20px;
     text-align: center;
