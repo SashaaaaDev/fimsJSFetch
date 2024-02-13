@@ -19,6 +19,7 @@ body {
   font-size: 20px;
   height: 100vh;
   color: #9e2b09;
+  background-size: cover;
 }
 .container {
   padding: 25px 25px 0 25px;
